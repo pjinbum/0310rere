@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>condition test3</title>
+</head>
+<body>
+    가위(1), 바위(2), 보(3)<br>
+    <script>
+        var userNum = prompt("숫자를 입력하세요.", "가위(1), 바위(2), 보(3)");
+        var comNum = parseInt((Math.random() * 3) + 1);
+        document.write("당신의 선택은 " + userNum + "<br>");
+        document.write("컴퓨터의 선택은 " + comNum + "<br>");
+        switch (comNum - userNum) {
+            case 2: case -1:
+                document.write('이겼습니다.');
+                break;
+            case 1: case -2:
+                document.write('졌습니다.');
+                break;
+            case 0:
+                document.write('비겼습니다.');
+                break;
+            default:
+                document.write('잘못 입력하셨습니다.');
+                break;
+        }
+    </script>
+</body>
+</html>
